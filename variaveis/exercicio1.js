@@ -8,10 +8,10 @@ var comidaFavorita;
 //atribua valor
 comidaFavorita = 'Lasanha';
 //declarar 5 variaveis diferentes s/ valor
-let rg;
-let cpf;
-let numeroDeFilhos;
-let bebidaFavorita;
+let rg,
+    cpf,
+    numeroDeFilhos,
+    bebidaFavorita;
 var corFavorita;
 //console
 console.log(meuNome, minhaIdade);
