@@ -9,3 +9,8 @@ var totalComprado = 5;
 var totalPreco = preco * totalComprado;
 
 console.log(totalPreco);
+
+var sobrenome = 'Santos',
+    cidade = 'Charqueadas';
+
+console.log(sobrenome, cidade);
