@@ -16,11 +16,11 @@ console.log(pessoa);
 var quadrado = {
     lados: 4,
     //area: function(lado) {
-    area(lado){
+    area(lado) {
         return lado * lado;
     },
     //perimetro: function(lado){
-    perimetro(lado){
+    perimetro(lado) {
         return this.lados * lado;
     },
 }
@@ -46,7 +46,7 @@ var bg = menu.backgroundColor; // '#84E'
 menu.backgroundColor = '#000';
 menu.color = 'blue';
 
-menu.esconder = function() {
+menu.esconder = function () {
     console.log('Esconder');
 }
 
@@ -56,7 +56,7 @@ var height = 120;
 var menu2 = {
     width: 800,
     height: 50,
-    metadeHeight(){
+    metadeHeight() {
         return this.height / 2;
     }
 }

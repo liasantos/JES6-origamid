@@ -2,10 +2,10 @@
 var pessoa = {
     nome: 'Lia',
     sobrenome: 'Santos',
-    idade: 27,   
+    idade: 27,
 }
 
-pessoa.nomeCompleto = function(){
+pessoa.nomeCompleto = function () {
     return `${this.nome} ${this.sobrenome}`;
 }
 
@@ -31,8 +31,8 @@ cachorro = {
     raça: 'Labrador',
     cor: 'preto',
     idade: 10,
-    late(humano){
-        if(humano === 'homem'){
+    late(humano) {
+        if (humano === 'homem') {
             return 'Latiu!';
         } else {
             return 'Silêncio...'
