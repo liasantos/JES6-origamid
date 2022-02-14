@@ -8,8 +8,9 @@ videoGames[2]; //Xbox
 //metodos e props de Array
 console.log(videoGames.pop()); //remove ultimo item e o retorna
 console.log(videoGames.push('3DS')); //adiciona ao final
-console.log(videoGames); //['Switch', 'PS4', '3DS']
 console.log(videoGames.length); //3
+console.log(videoGames); //['Switch', 'PS4', '3DS']
+
 
 //For loop
 //inicio meio(condição) fim
