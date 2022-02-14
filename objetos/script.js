@@ -24,6 +24,7 @@ var quadrado = {
         return this.lados * lado;
     },
 }
+//this faz referência ao próprio objeto
 
 console.log(quadrado.area(5));
 console.log(quadrado.perimetro(5));
@@ -48,4 +49,21 @@ menu.color = 'blue';
 menu.esconder = function() {
     console.log('Esconder');
 }
+
+//this faz referência ao próprio objeto
+//exemplo2
+var height = 120;
+var menu2 = {
+    width: 800,
+    height: 50,
+    metadeHeight(){
+        return this.height / 2;
+    }
+}
+
+console.log(menu2.metadeHeight()); // 25
+//sem this seria 60
+
+//protótipo e herança
+//objeto herda props e métodos do objeto que foi utilizado para criar o mesmo
 
