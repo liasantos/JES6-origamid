@@ -1,18 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fetch</title>
-</head>
+  </head>
 
-<body>
-    <img src="" alt="" width="200px"/>
+  <body>
+    <style>
+      label,
+      input {
+        display: block;
+      }
+    </style>
+    <p><b>Exercícios</b></p>
+    <form id="buscaCep">
+      <label for="cep">CEP</label>
+      <input type="text" name="cep" id="cep" />
+      <input type="button" value="Buscar cep" id="btnCep" />
+    </form>
+    <div class="resultadoCep"></div>
+    <br />
+    <br />
+    <p><b>Aula</b></p>
+    <img src="" alt="" width="200px" />
     <div class="conteudo"></div>
     <script src="script.js"></script>
     <script src="exercicios.js"></script>
-</body>
-
+  </body>
 </html>
