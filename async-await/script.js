@@ -6,8 +6,9 @@
 async function puxarDados() {
   const dadosResponse = await fetch("./dados.json");
   const dadosJSON = await dadosResponse.json();
+  // console.log(dadosJSON);
 
-  document.body.innerText = dadosJSON.titulo;
+  document.body.innerText = dadosJSON.aula;
 }
 
 puxarDados();
@@ -19,7 +20,8 @@ function iniciarFetch() {
   fetch("./dados.json")
     .then((dadosResponse) => dadosResponse.json())
     .then((dadosJSON) => {
-      document.body.innerText = dadosJSON.titulo;
+      console.log(dadosJSON);
+      document.body.innerText = dadosJSON.aula;
     });
 }
 iniciarFetch();
@@ -27,7 +29,8 @@ iniciarFetch();
 async function iniciarAsync() {
   const dadosResponse = await fetch("./dados.json");
   const dadosJSON = await dadosResponse.json();
-  document.body.innerText = dadosJSON.titulo;
+  console.log(dadosJSON.aula);
+  document.body.innerText = dadosJSON.aula;
 }
 iniciarAsync();
 
@@ -38,9 +41,9 @@ async function puxarDados() {
   try {
     const dadosResponse = await fetch("./dados.json");
     const dadosJSON = await dadosResponse.json();
-    document.body.innerText = dadosJSON.titulo;
+    document.bodyy.innerText = dadosJSON.tempo;
   } catch (erro) {
-    console.log(erro);
+    console.log("Erro: " + erro);
   }
 }
 puxarDados();
@@ -50,12 +53,15 @@ puxarDados();
 // resposta resolvida do fetch para transformarmos a response em json.
 
 async function iniciarAsync() {
-  const dadosResponse = fetch("./dados.json");
-  const clientesResponse = fetch("./clientes.json");
+  const responseDados = fetch("./dados.json");
+  const responseClientes = fetch("./clientes.json");
 
   // ele espera o que está dentro da expressão () ocorrer primeiro
-  const dadosJSON = await (await dadosResponse).json();
-  const clientesJSON = await (await clientesResponse).json();
+  const jsonDados = await (await responseDados).json();
+  const clientesJSON = await (await responseClientes).json();
+
+  console.log(jsonDados);
+  console.log(clientesJSON);
 }
 iniciarAsync();
 
@@ -65,15 +71,20 @@ iniciarAsync();
 
 async function asyncSemPromise() {
   // Console não irá esperar.
-  await setTimeout(() => console.log("Depois de 1s"), 1000);
+  await setTimeout(() => console.log("Depois de 1segundo"), 1000);
   console.log("acabou");
 }
 asyncSemPromise();
 
+// com promise irá esperar
+
 async function iniciarAsync() {
   await new Promise((resolve) => {
-    setTimeout(() => resolve(), 1000);
+    setTimeout(() => {
+        console.log("Depois de 1 s");
+        resolve();
+    }, 1000);
   });
-  console.log("Depois de 1s");
+  console.log("Acabou!!");
 }
 iniciarAsync();
